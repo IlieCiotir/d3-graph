@@ -96,6 +96,7 @@
                 .classed("delve", (d) => d.region === "Delve")
                 .on("mouseover", handleMouseOver)
                 .on("mouseout", handleMouseOut)
+                .on("dblclick", (d) => { d.fx = null; d.fy = null; })
                 .call(d3.drag()
                     .on("start", dragstarted)
                     .on("drag", dragged)
