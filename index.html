@@ -11,6 +11,10 @@
             position: absolute;
             right: 0;
             bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
     </style>
     <!-- Load d3.js -->
@@ -22,9 +26,15 @@
 <body style="height: 100vh; margin:0;">
     <div id="my_dataviz"></div>
     <div class="action-bar">
-        <input type="file" id="file-selector" accept=".json">
+        <div>
+            <h6>Fix Position: Drag</h6>
+            <h6>Remove Fix Position: Double Click</h6>
+        </div>
+        <div>
+            <input type="file" id="file-selector" accept=".json">
 
-        <a id="downloadAnchorElem">Download fixed nodes</a>
+            <a id="downloadAnchorElem">Download fixed nodes</a>
+        </div>
     </div>
 
     <script defer>
